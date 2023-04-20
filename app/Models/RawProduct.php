@@ -10,4 +10,9 @@ class RawProduct extends Model
     use HasFactory;
 
     protected $guarded = ["id"];
+
+    public function RawProductOwners()
+    {
+        return $this->hasMany(RawProductOwner::class);
+    }
 }
