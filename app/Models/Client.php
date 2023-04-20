@@ -71,4 +71,9 @@ class Client extends Model implements HasMedia, \Illuminate\Contracts\Auth\Authe
     {
         return $this->hasMany(ServeProductOwner::class);
     }
+
+    public function Business()
+    {
+        return $this->hasOne(Business::class);
+    }
 }
