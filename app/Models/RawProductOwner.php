@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class RawProductOwner extends Model
 {
     use HasFactory;
 
     protected $guarded = ["id"];
 
-    public function ProductTypes()
+    public function Product()
     {
-        return $this->hasMany(ProductType::class);
+        return $this->belongsTo(Product::class);
     }
 
-    public function RawProductOwners()
+    public function Client()
     {
-        return $this->hasMany(RawProductOwner::class);
+        return $this->belongsTo(Client::class);
     }
 }

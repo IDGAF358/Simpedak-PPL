@@ -61,4 +61,9 @@ class Client extends Model implements HasMedia, \Illuminate\Contracts\Auth\Authe
     {
         return null;
     }
+
+    public function RawProductOwners()
+    {
+        return $this->hasMany(RawProductOwner::class);
+    }
 }
