@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Client extends Model
+
+class Client extends Model implements HasMedia
 {
-    use HasFactory, HasRoles;
+    use HasFactory, HasRoles, InteractsWithMedia;
 
     protected $guarded = ["id"];
 
