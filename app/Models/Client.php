@@ -9,7 +9,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 
-class Client extends Model implements HasMedia
+class Client extends Model implements HasMedia, \Illuminate\Contracts\Auth\Authenticatable
 {
     use HasFactory, HasRoles, InteractsWithMedia;
 
@@ -24,11 +24,41 @@ class Client extends Model implements HasMedia
         'password',
     ];
 
-    public function registerMediaCollections()
+    public function registerMediaCollections(): void
     {
         $this->addMediaCollection("owner-avatar");
         $this->addMediaCollection("supplier-avatar");
         $this->addMediaCollection("client-permission-letter");
         $this->addMediaCollection("client-business-galleries");
+    }
+
+    public function getAuthIdentifier()
+    {
+        return $this->attributes["email"];
+    }
+
+    public function getAuthIdentifierName()
+    {
+        return "name";
+    }
+
+    public function getAuthPassword()
+    {
+        return $this->attributes["password"];
+    }
+
+    public function getRememberToken()
+    {
+        return null;
+    }
+
+    public function setRememberToken($value)
+    {
+        // do nothing
+    }
+
+    public function getRememberTokenName()
+    {
+        return null;
     }
 }
