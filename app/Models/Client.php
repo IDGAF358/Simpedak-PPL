@@ -23,4 +23,10 @@ class Client extends Model implements HasMedia
     protected $hidden = [
         'password',
     ];
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection("owner-avatar");
+        $this->addMediaCollection("supplier-avatar");
+    }
 }
