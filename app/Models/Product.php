@@ -25,4 +25,9 @@ class Product extends Model
     {
         return $this->hasMany(ServeProductOwner::class);
     }
+
+    public function TransactionDetails()
+    {
+        return $this->hasMany(TransactionDetail::class);
+    }
 }
