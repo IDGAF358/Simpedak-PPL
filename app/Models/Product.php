@@ -20,4 +20,9 @@ class Product extends Model
     {
         return $this->hasMany(RawProductOwner::class);
     }
+
+    public function ServeProductOwners()
+    {
+        return $this->hasMany(ServeProductOwner::class);
+    }
 }
