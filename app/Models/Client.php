@@ -28,5 +28,7 @@ class Client extends Model implements HasMedia
     {
         $this->addMediaCollection("owner-avatar");
         $this->addMediaCollection("supplier-avatar");
+        $this->addMediaCollection("client-permission-letter");
+        $this->addMediaCollection("client-business-galleries");
     }
 }
