@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="simple-menu-dashboard.html" class="side-menu">
+                    <a href="{{ route("owner.product.serve-product.index") }}" class="side-menu {{ Route::is("owner.product.serve-product*") ? 'side-menu--active' : ''}}">
                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                         <div class="side-menu__title"> Bahan Jadi </div>
                     </a>
