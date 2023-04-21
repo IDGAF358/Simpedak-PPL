@@ -35,9 +35,11 @@ Route::middleware('auth')->prefix("admin")->group(function () {
 
 // Owner Route
 Route::prefix("owner")->group(function () {
-    // Login Route
     Route::get("login", function () {
         return view("layouts.owner.guest");
+    });
+    Route::get("dashboard", function () {
+        return view("pages.owner.dashboard.index");
     });
 });
 
