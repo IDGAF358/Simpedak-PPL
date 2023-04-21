@@ -46,6 +46,10 @@ Route::prefix("owner")->group(function () {
     Route::get("produk/bahan-baku", function () {
         return view("pages.owner.raw_product.index");
     })->name("owner.product.raw-product.index");
+
+    Route::get("produk/bahan-baku/riwayat", function () {
+        return view("pages.owner.raw_product.history");
+    })->name("owner.product.raw-product.history.index");
 });
 
 require __DIR__ . '/auth.php';

@@ -18,7 +18,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route("owner.product.raw-product.index") }}" class="side-menu {{ Route::is("owner.product.raw-product.index") ? 'side-menu--active' : '' }}">
+                    <a href="{{ route("owner.product.raw-product.index") }}" class="side-menu {{ Route::is("owner.product.raw-product.*") ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                         <div class="side-menu__title"> Bahan Baku </div>
                     </a>
