@@ -33,4 +33,12 @@ Route::middleware('auth')->prefix("admin")->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+// Owner Route
+Route::prefix("owner")->group(function () {
+    // Login Route
+    Route::get("login", function () {
+        return view("layouts.owner.guest");
+    });
+});
+
+require __DIR__ . '/auth.php';
