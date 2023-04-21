@@ -37,10 +37,15 @@ Route::middleware('auth')->prefix("admin")->group(function () {
 Route::prefix("owner")->group(function () {
     Route::get("login", function () {
         return view("layouts.owner.guest");
-    });
+    })->name("owner.login.index");
+
     Route::get("dashboard", function () {
         return view("pages.owner.dashboard.index");
-    });
+    })->name("owner.dashboard.index");
+
+    Route::get("produk/bahan-baku", function () {
+        return view("pages.owner.raw_product.index");
+    })->name("owner.product.raw-product.index");
 });
 
 require __DIR__ . '/auth.php';
