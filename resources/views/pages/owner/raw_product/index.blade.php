@@ -11,7 +11,46 @@
         <!-- END: Add Modal Button --->
         <!-- BEGIN: Add Modal Add --->
         <div class="modal" id="header-footer-modal-preview">
-            <div class="modal__content">
+            <div class="modal__content relative"> 
+                <a data-dismiss="modal" href="javascript:;" class="absolute right-0 top-0 mt-3 mr-3"> <i data-feather="x" class="w-8 h-8 text-gray-500"></i> </a>
+                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-gray-200">
+                    <h2 class="font-medium text-base mr-auto">
+                        Data Bahan Baku
+                    </h2>
+                </div>
+                <div class="p-5" id="vertical-form">
+                    <div class="preview">
+                        <div>
+                            <label>Nama</label>
+                            <input type="text" class="input w-full border mt-2" placeholder="Masukkan nama bahan baku">
+                        </div>
+                        <div class="mt-3">
+                            <label>Jumlah</label>
+                            <input type="number" class="input w-full border mt-2" placeholder="Masukkan jumlah bahan baku">
+                        </div>
+                        <div class="mt-3">
+                            <label>Satuan</label>
+                            <select data-hide-search="true" class="select2 w-full">
+                                <option value="Pieces">Pieces</option>
+                                <option value="Packages">Packages</option>
+                                <option value="Kilogram">Kilogram</option>
+                                <option value="Liter">Liter</option>
+                                <option value="Ton">Ton</option>
+                                <option value="Buah">Buah</option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <label>Gambar</label>
+                            <input type="file" class="input w-full border mt-2">
+                        </div>
+                        <button type="button" class="button bg-theme-1 text-white mt-5">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="modal" id="header-footer-modal-preview">
+            <div class="modal__content relative">
+                <a data-dismiss="modal" href="javascript:;" class="absolute right-0 top-0 mt-3 mr-3"> <i data-feather="x" class="w-8 h-8 text-gray-500"></i> </a>
                 <div class="intro-y box">
                     <div class="flex flex-col sm:flex-row items-center p-5 border-b border-gray-200">
                         <h2 class="font-medium text-base mr-auto">
@@ -41,14 +80,14 @@
                             </div>
                             <div class="mt-3">
                                 <label>Gambar</label>
-                                <input type="file" class="input w-full border mt-2">
+                                <input type="file" class="input w-full border mt-2" multiple="true">
                             </div>
                             <button type="button" class="button bg-theme-1 text-white mt-5">Simpan</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- END: Begin Modal Add --->
         <div class="dropdown relative ml-auto sm:ml-0">
             <button class="dropdown-toggle button px-2 box text-gray-700">
@@ -83,15 +122,11 @@
                 </td>
                 <td class="text-center border-b">
                     <div class="flex sm:justify-center">
-                        <div class="intro-x w-10 h-10 image-fit">
-                            <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-9.jpg">
-                        </div>
+                        <div class="intro-x w-10 h-10 image-fit"></div>
                         <div class="intro-x w-10 h-10 image-fit -ml-5">
                             <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-10.jpg">
                         </div>
-                        <div class="intro-x w-10 h-10 image-fit -ml-5">
-                            <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/preview-12.jpg">
-                        </div>
+                        <div class="intro-x w-10 h-10 image-fit -ml-5"></div>
                     </div>
                 </td>
                 <td class="text-center border-b">113</td>
@@ -100,7 +135,7 @@
                 </td>
                 <td class="border-b w-5">
                     <div class="flex sm:justify-center items-center">
-                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Resep </a>
+                        <a class="flex items-center mr-3" href=""> <i data-feather="book-open" class="w-4 h-4 mr-1"></i> Riwayat </a>
                         <a class="flex items-center mr-3 text-yellow-700" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
                         <a class="flex items-center text-theme-6" href=""> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
                     </div>
