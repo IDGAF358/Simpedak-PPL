@@ -54,14 +54,6 @@
                                     <option value="Strawberry">Strawberry</option>
                                 </select>
                                 <input type="number" class="input border h-10" placeholder="Masukkan jumlah bahan jadi">
-                                <select data-hide-search="true" class="select2 w-full">
-                                    <option value="Pieces">Pieces</option>
-                                    <option value="Packages">Packages</option>
-                                    <option value="Kilogram">Kilogram</option>
-                                    <option value="Liter">Liter</option>
-                                    <option value="Ton">Ton</option>
-                                    <option value="Buah">Buah</option>
-                                </select>
                                 <button class="button inline-block mr-1 mb-2 border border-theme-1 text-theme-1" onclick="addInput()">+</button>
                             </div>
                             <div class="input-container"></div>
@@ -167,14 +159,6 @@
                                     <option value="Strawberry">Strawberry</option>
                                 </select>
                                 <input type="number" class="input border h-10" placeholder="Masukkan jumlah bahan jadi">
-                                <select data-hide-search="true" class="select2 w-full border">
-                                    <option value="Pieces">Pieces</option>
-                                    <option value="Packages">Packages</option>
-                                    <option value="Kilogram">Kilogram</option>
-                                    <option value="Liter">Liter</option>
-                                    <option value="Ton">Ton</option>
-                                    <option value="Buah">Buah</option>
-                                </select>
                                 <button class="button inline-block mr-1 mb-2 border border-theme-6 text-theme-6" onclick="removeElement(this)">-</button>`;
             window.requestAnimationFrame(() => {
                 // panggil fungsi Select2 pada elemen select yang baru saja ditambahkan
