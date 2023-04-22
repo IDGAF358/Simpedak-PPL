@@ -35,4 +35,9 @@ class Product extends Model
     {
         return $this->hasMany(Receipt::class);
     }
+
+    public function RawProductHistories()
+    {
+        return $this->hasMany(RawProductHistory::class);
+    }
 }
