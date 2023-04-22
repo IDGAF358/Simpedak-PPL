@@ -48,8 +48,9 @@
                         </div>
                         <div class="mt-3">
                             <label>Resep <span class="text-gray-500">(Jika tidak perlu resep, boleh dikosongi)</span> </label>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 mt-2">
                                 <select data-hide-search="true" class="select2 w-full">
+                                    <option value="">--Pilih Resep--</option>
                                     <option value="Susu Sapi">Susu Sapi</option>
                                     <option value="Strawberry">Strawberry</option>
                                 </select>
@@ -155,6 +156,7 @@
             const newInput = document.createElement('div');
             newInput.className="flex gap-2";
             newInput.innerHTML = `<select data-hide-search="true" class="select2 w-full border">
+                                    <option value="">--Pilih Resep--</option>
                                     <option value="Susu Sapi">Susu Sapi</option>
                                     <option value="Strawberry">Strawberry</option>
                                 </select>
